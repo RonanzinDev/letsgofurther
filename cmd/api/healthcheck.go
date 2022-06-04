@@ -6,6 +6,7 @@ import (
 )
 
 // Handler witch writes a plain text response
+//Show the application information
 func (app *application) healtcheckHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "status :available")
 	fmt.Fprintf(w, "environment: %s\n", app.config.env)
